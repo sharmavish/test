@@ -11,5 +11,5 @@ jobs:
       if: contains(github.ref, 'development')
     - name: test print  
       run: |
-       echo "::set-env name=TEST::HELLLOOOOOOOOOOOOOOOOOOOOOOO"
+       export TEST="HELLLOOOOOOOOOOOOOOOOOOOOOOO"
        echo $TEST && env | grep -i test
