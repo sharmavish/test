@@ -9,8 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       if: contains(github.ref, 'development')
-      env:
-        TEST: "HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
     - name: test print  
       run: |
+       echo "::set-env name=TEST::"HELLLOOOOOOOOOOOOOOOOOOOOOOO"
        echo $TEST && env | grep -i test
