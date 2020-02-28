@@ -8,10 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      if: contains(github.ref, 'feature') ||  contains(github.ref, 'development')
+      if: github.ref == "refs/heads/feature*" || github.ref == "refs/heads/development"
       env:
         TEST: "HELOOOOOOOOOOOOOOOO"
     - name: print
       run: |
        echo $TEST
-       env
