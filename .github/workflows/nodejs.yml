@@ -15,4 +15,5 @@ jobs:
       run: |
        echo $TEST
     - name: END
+      if: contains(github.ref, 'refs')
       run : echo "WELCOME"
