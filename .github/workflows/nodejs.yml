@@ -14,3 +14,5 @@ jobs:
         TEST: "HELOOOOOOOOOOOOOOOOOOOO"
       run: |
        echo $TEST
+    - name: END
+      run : echo "WELCOME"
