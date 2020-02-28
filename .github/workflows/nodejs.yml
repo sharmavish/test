@@ -12,4 +12,6 @@ jobs:
       env:
         TEST: "HELOOOOOOOOOOOOOOOO"
     - name: print
-      run: echo "$TEST"
+      run: |
+       echo $TEST
+       env
