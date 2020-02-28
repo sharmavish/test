@@ -10,7 +10,6 @@ jobs:
     - uses: actions/checkout@v2
       if: contains(github.ref, 'feature') ||  contains(github.ref, 'development')
       env:
-        TEST: "HELOOOOOOOOOOOOOOOO"
-    - name: print
-      run: |
-       echo $TEST
+        TEST: "HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+    - name: test print  
+      run: echo $TEST
