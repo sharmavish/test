@@ -8,8 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      if: contains(github.ref, 'feature') ||  contains(github.ref, 'development')
+    - name: Test
+      if: contains(github.ref, 'development') || contains(github.ref, 'feature')
       env:
-        TEST: "HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
-    - name: test print  
-      run: echo $TEST
+        TEST: "HELOOOOOOOOOOOOOOOOOOOO"
+      run: |
+       echo $TEST
+    - name: END
+      run : echo "WELCOME"
