@@ -13,5 +13,4 @@ jobs:
         TEST: "HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
     - name: test print  
       run: |
-       env | grep TEST
-       echo $TEST
+       echo $TEST && env | grep -i test
