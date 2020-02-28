@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      if: contains(github.ref, "feature") ||  contains(github.ref, "development")
+      env:
+        TEST: "HELOOOOOOOOOOOOOOOO"
+    - name: print
+      run: echo "$TEST"
